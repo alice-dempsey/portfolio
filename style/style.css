@@ -1,0 +1,113 @@
+/***** General Styling *****/ 
+html {
+	height: 100%;
+}
+body {
+	font-family: 'Muli', sans-serif;
+	margin: 0px;
+	height: 100%;
+}
+
+ul {
+	list-style-type: none; 
+}
+
+.text_box {
+	display: flex; 
+	justify-content: flex-start;
+	width: 50%;
+	padding-top: 2vw; 
+}
+
+/***** Nav Menu Styling - Home page *****/ 
+.nav_container {
+	display: flex;
+	justify-content: flex-end; 
+	margin-bottom: -2vw;
+}
+
+.nav_menu {
+	display: flex; 
+	margin-bottom: 0vw;
+	margin-right: 4vw;
+}
+
+.nav_button {
+	margin: 1vw;
+	border: none;
+	background-color: white; 
+	font-size: 20px; 
+	font-family: 'Muli', sans-serif;
+}
+
+.nav_button:hover {
+	background-color: #DCEEDA; 
+}
+
+
+/***** Home Page Styling *****/ 
+h1.name {
+	display: flex; 
+	align-items: flex-end;
+	margin-left: 10vw;
+	margin-bottom: -0.6vw;
+	margin-top: 0vw; 
+	font-size: 40px;
+	color: black;
+}
+
+.body_container {
+	margin-left: 10vw; 
+	margin-top: 0vw; 
+	margin-right: 0vw;
+	margin-bottom: 0vw;
+	background-color: #DCEEDA; 
+	height: 100%;
+}
+
+.profile_pic {
+	display: flex;
+	align-self: center;
+	justify-content: center;
+	height: 100%;
+	width: 15%;
+	border-radius: 50%; 
+}
+
+/***** Portfolio Page Styling *****/ 
+
+.portfolio_header {
+	background-color: #DCEEDA;
+	display: flex;
+	align-items: center;
+}
+
+#home {
+	padding-left: 1vw;
+	background-color: #DCEEDA;
+}
+
+.title {
+	display: flex; 
+	justify-content: flex-start;
+	width: 100%;
+	padding-left: 2%;  
+}
+
+.section_title {
+	justify-content: center; 
+	padding-left: 0vw;
+}
+
+.project_pic {
+	display: flex;
+	align-self: center;
+	height: 300%;
+	width: 30%;
+}
+
+.text_and_photo {
+	display: flex; 
+	justify-content: space-around;
+	width: 100%; 
+}
