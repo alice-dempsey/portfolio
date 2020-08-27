@@ -30,31 +30,15 @@ var myprojects = [
 			"tech":"HTML, CSS, Tableau, and JavaScript - D3",
 			"summary":"Junior fall, I took Visual Analytics with Professor Remco Chang. We learned about how engineers use visual tools to analyze information and comprehend enormous data sets. We dabbled in different tools using in the Visual Analytics world such as R, Tableau, and the D3 JavaScript library. For our final project, my partner and I tackled a Mini Challenge from the VAST 2019 \"Disaster at St. Himark!\". We used D3 and Tableau to build a dashboard for the fictional town officials of St. Himark to monitor a recent earthquake that damaged the nuclear power plant. We used graphs and maps to help the town officials understand the citizen reports and prioritize resources.",
 			"mypart":"I worked primarily on the dashboard page. I wrote the JavaScript functions to pull the information from the AirTable database for a given class and display it to the user. I also set up the localStorage in order to keep track of which user was logged in and thus which classes should be displayed."
-		},		
-		{
-			"name":"HubSchool",
-			"image":"../style/assets/WCFB.png",
-			"tagline":"Online platform to connect students, parents, and teachers",
-			"tech":"HTML, CSS, JavaScript, and AirTable",
-			"summary":"My friends and I completed this project for the Hack for the People 2020 hackathon. In 72 hours, we put together an online platform for students, parents, and teachers to communicate during distance learning. The student/parent portal allows the user to subscribe to certain pages for their classes. The pages then fill dynamically with the resources the teacher has posted. The teacher portal allows the teachers to easily upload new resources and manage their classes. Although the website is quite simple, I'm incredibly proud of how much we accomplished given the time limit as well as family obligations.",
-			"mypart":"I worked primarily on the dashboard page. I wrote the JavaScript functions to pull the information from the AirTable database for a given class and display it to the user. I also set up the localStorage in order to keep track of which user was logged in and thus which classes should be displayed."
-		},		
-		{
-			"name":"HubSchool",
-			"image":"../style/assets/WCFB.png",
-			"tagline":"Online platform to connect students, parents, and teachers",
-			"tech":"HTML, CSS, JavaScript, and AirTable",
-			"summary":"My friends and I completed this project for the Hack for the People 2020 hackathon. In 72 hours, we put together an online platform for students, parents, and teachers to communicate during distance learning. The student/parent portal allows the user to subscribe to certain pages for their classes. The pages then fill dynamically with the resources the teacher has posted. The teacher portal allows the teachers to easily upload new resources and manage their classes. Although the website is quite simple, I'm incredibly proud of how much we accomplished given the time limit as well as family obligations.",
-			"mypart":"I worked primarily on the dashboard page. I wrote the JavaScript functions to pull the information from the AirTable database for a given class and display it to the user. I also set up the localStorage in order to keep track of which user was logged in and thus which classes should be displayed."
 		}
 	]
 
 
 function populatePage() {
 	var parent = document.getElementById("card_container");
-	parent.style.margin = "5vw"; 
-	// parent.style.display = "flex"; 
-	parent.style.width = "100%";
+	parent.style.marginLeft = "10vw"; 
+	parent.style.backgroundColor = "white"; 
+	parent.style.padding = "3vw";
 	parent.style.display = "grid"; 
 	parent.style.gridTemplateColumns = "repeat(2, 1fr)"; 
 
@@ -71,11 +55,27 @@ function createCard(data) {
 	image.style.opacity = "1";
 
 	var title = document.createElement("div");
-	var text = document.createTextNode(data.name); 
-	title.appendChild(text); 
+	var text = document.createTextNode(data.name);
+
+	var taglineWrapper = document.createElement("p"); 
+	taglineWrapper.style.fontSize = "18px";
+	taglineWrapper.style.fontWeight = "normal";
+	taglineWrapper.style.marginTop = "1vw";
+	var tagline = document.createTextNode(data.tagline);
+	taglineWrapper.appendChild(tagline);  
+	title.appendChild(text);
+	title.appendChild(taglineWrapper);
+	title.style.fontSize = "30px";
+	title.style.fontWeight = "bold";
+	title.style.marginTop = "-3.5vw"; 
+	title.style.marginLeft = "1vw";
 	title.id = data.name; 
 	title.style.opacity = "0"; 
 
+	image.onclick = function () {
+		localStorage.setItem('proj', JSON.stringify(data)); 
+		window.location = "project.html"; 
+	}
 	image.onmouseover = function () {
 		this.style.opacity = "0.3"; 
 		document.getElementById(data.name).style.opacity = "1"; 

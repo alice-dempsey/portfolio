@@ -17,6 +17,7 @@ ul {
 	justify-content: flex-start;
 	width: 50%;
 	padding-top: 2vw; 
+	padding-right: 2vw; 
 }
 
 /***** Nav Menu Styling - Home page *****/ 
@@ -80,6 +81,7 @@ h1.name {
 	background-color: #DCEEDA;
 	display: flex;
 	align-items: center;
+	margin-bottom: 2vw; 
 }
 
 #home {
@@ -99,15 +101,21 @@ h1.name {
 	padding-left: 0vw;
 }
 
-.project_pic {
-	display: flex;
-	align-self: center;
-	height: 300%;
-	width: 30%;
+/***** Project Page Styling *****/ 
+
+.project_container{ 
+	background-color: white; 
+	margin-left: 10vw; 
+}
+
+.tagline {
+	display: flex; 
+	justify-content: center;
 }
 
 .text_and_photo {
 	display: flex; 
 	justify-content: space-around;
-	width: 100%; 
+	background-color: white; 
+	padding: 0vw 3vw 3vw 3vw; 
 }
