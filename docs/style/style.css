@@ -20,6 +20,12 @@ ul {
 	padding-right: 2vw; 
 }
 
+.text_and_photo {
+	display: flex; 
+	justify-content: space-around;
+	padding: 0vw 3vw 3vw 3vw; 
+}
+
 /***** Nav Menu Styling - Home page *****/ 
 .nav_container {
 	display: flex;
@@ -111,11 +117,4 @@ h1.name {
 .tagline {
 	display: flex; 
 	justify-content: center;
-}
-
-.text_and_photo {
-	display: flex; 
-	justify-content: space-around;
-	background-color: white; 
-	padding: 0vw 3vw 3vw 3vw; 
 }
