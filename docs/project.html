@@ -31,8 +31,14 @@
 				<em>My Contribution: </em><script type="text/javascript">document.write(getMe())</script>
 			</p>
 		</div>
-		<img id="project_pic">
-		<script type="text/javascript">getImage()</script>		
+		<div class="gallery">
+			<img id="project_pic">
+			<script type="text/javascript">origImage()</script>	
+			<div class="gallery_buttons">
+				<button class="gallery_button" onclick="prevImage()">Prev</button>
+				<button class="gallery_button" onclick="nextImage()">Next</button>
+			</div>
+		</div>	
 	</div>
 </div>
 </body>

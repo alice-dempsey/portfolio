@@ -1,7 +1,7 @@
 var myprojects = [
 		{
 			"name":"HubSchool",
-			"image":"style/assets/WCFB.png",
+			"images":["style/assets/WCFB.png"],
 			"tagline":"Online platform to connect students, parents, and teachers",
 			"tech":"HTML, CSS, JavaScript, and AirTable",
 			"summary":"My friends and I completed this project for the Hack for the People 2020 hackathon. In 72 hours, we put together an online platform for students, parents, and teachers to communicate during distance learning. The student/parent portal allows the user to subscribe to certain pages for their classes. The pages then fill dynamically with the resources the teacher has posted. The teacher portal allows the teachers to easily upload new resources and manage their classes. Although the website is quite simple, I'm incredibly proud of how much we accomplished given the time limit as well as family obligations.",
@@ -9,7 +9,7 @@ var myprojects = [
 		},
 		{
 			"name":"Interactive Menu Browsing",
-			"image":"style/assets/WCFB.png",
+			"images":["style/assets/WCFB.png"],
 			"tagline":"Mobile menu browsing component built in Flutter",
 			"tech":"Flutter, Dart, iOS Simulator, Android Studios",
 			"summary":"During the summer of 2020, I interned with Publicis Sapient and worked on building a Flutter app that allowed the user to browsing through a fastfood menu.",
@@ -17,7 +17,7 @@ var myprojects = [
 		},
 		{
 			"name":"Food Bank Volunteer Portal",
-			"image":"style/assets/WCFB.png",
+			"images":["style/assets/WCFB.png"],
 			"tagline":"Login portal to track which volunteers are currently working",
 			"tech":"HTML, CSS, JavaScript, GitHub, and Trello",
 			"summary":"My first year at Tufts, I joined JumboCode, a student-run club that builds apps and websites for non-profits. I continued with the club my sophomore year, and we worked on a volunteer sign-in/sign-out portal for the Worechester County Food Bank. I learned how to build a website from a designer's Zeplin sketches. I love working with JumboCode because I collaborate with other students in real world scenarios. We use common tools such as Trello and GitHub in order to build the best project we can for our clients.",
@@ -25,7 +25,7 @@ var myprojects = [
 		},		
 		{
 			"name":"Visual Analytics Final Project",
-			"image":"style/assets/crowdsourcing.png",
+			"images":["style/assets/crowdsourcing.png"],
 			"tagline":"Dashboard to track earthquake damage",
 			"tech":"HTML, CSS, Tableau, and JavaScript - D3",
 			"summary":"Junior fall, I took Visual Analytics with Professor Remco Chang. We learned about how engineers use visual tools to analyze information and comprehend enormous data sets. We dabbled in different tools using in the Visual Analytics world such as R, Tableau, and the D3 JavaScript library. For our final project, my partner and I tackled a Mini Challenge from the VAST 2019 \"Disaster at St. Himark!\". We used D3 and Tableau to build a dashboard for the fictional town officials of St. Himark to monitor a recent earthquake that damaged the nuclear power plant. We used graphs and maps to help the town officials understand the citizen reports and prioritize resources.",
@@ -50,7 +50,7 @@ function populatePage() {
 function createCard(data) {
 	var card = document.createElement("div"); 
 	var image = document.createElement("img");
-	image.src = data.image; 
+	image.src = data.images[0]; 
 	image.style.width = "80%"; 
 	image.style.opacity = "1";
 
